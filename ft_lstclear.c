@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: diomende <diomende@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/22 15:38:38 by diomende          #+#    #+#             */
-/*   Updated: 2025/04/22 20:45:02 by diomende         ###   ########.fr       */
+/*   Created: 2025/04/22 18:55:50 by diomende          #+#    #+#             */
+/*   Updated: 2025/04/22 19:30:50 by diomende         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	t_list	*root;
+	t_list	*x;
 
-	root = ft_calloc(sizeof(t_list), 1);
-	if (!root)
-		return (NULL);
-	root->content = content;
-	root->next = NULL;
-	return (root);
+	if (!lst || !del)
+		return ;
+	while (*lst)
+	{
+		x = (*lst)->next;
+		del ((*lst)->content);
+		free (*lst);
+		*lst = x;
+	}
+	*lst = NULL;
 }
 
-// int main()
-// {
-// 	char	*i;
-// 	t_list	*node;
-// 	i = "a";
-// 	node = ft_lstnew(i);
-// 	printf("%s\n", node->content);
-// 	printf("%s\n", node->next);
-// 	free(node);
-// }
+// ???????????????????????????????????????????

@@ -1,36 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: diomende <diomende@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/22 15:38:38 by diomende          #+#    #+#             */
-/*   Updated: 2025/04/22 20:45:02 by diomende         ###   ########.fr       */
+/*   Created: 2025/04/22 17:43:28 by diomende          #+#    #+#             */
+/*   Updated: 2025/04/22 20:16:26 by diomende         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+t_list	*ft_lstlast(t_list *lst)
 {
-	t_list	*root;
+	t_list	*last;
 
-	root = ft_calloc(sizeof(t_list), 1);
-	if (!root)
+	last = lst;
+	if (!lst)
 		return (NULL);
-	root->content = content;
-	root->next = NULL;
-	return (root);
+	while (last->next != NULL)
+		last = last->next;
+	return (last);
 }
 
 // int main()
 // {
-// 	char	*i;
-// 	t_list	*node;
-// 	i = "a";
-// 	node = ft_lstnew(i);
-// 	printf("%s\n", node->content);
-// 	printf("%s\n", node->next);
-// 	free(node);
+// 	t_list t1;
+// 	t_list t2;
+// 	t_list t3;
+// 	t_list t4;
+// 	t_list t5;
+// 	t1.next = &t2;
+// 	t2.next = &t3;
+// 	t3.next = &t4;
+// 	t4.next = &t5;
+// 	t5.next = NULL;
+// 	printf("%p\n%p\n", &t5, ft_lstlast(&t5));
 // }
