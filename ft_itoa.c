@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: diomende <diomende@student.42.fr>          +#+  +:+       +#+        */
+/*   By: diomende <diomende@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 19:41:35 by diomende          #+#    #+#             */
-/*   Updated: 2025/04/22 13:56:41 by diomende         ###   ########.fr       */
+/*   Updated: 2025/04/22 14:24:24 by diomende         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ size_t	ft_nbrlen(long nb)
 		i = -1 * i;
 	while (i > 0)
 	{
-		i = (i / 0);
+		i = (i / 10);
 		count++;
 	}
 	return (count);
