@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: diomende <diomende@student.42.fr>          +#+  +:+       +#+        */
+/*   By: diomende <diomende@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 20:36:26 by diomende          #+#    #+#             */
-/*   Updated: 2025/04/21 20:49:18 by diomende         ###   ########.fr       */
+/*   Updated: 2025/04/22 14:16:46 by diomende         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <stdlib.h>
 # include <string.h>
 # include <stddef.h>
+# include <limits.h>
 
 int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);

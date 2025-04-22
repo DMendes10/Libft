@@ -6,15 +6,15 @@
 /*   By: diomende <diomende@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 19:41:35 by diomende          #+#    #+#             */
-/*   Updated: 2025/04/21 21:04:59 by diomende         ###   ########.fr       */
+/*   Updated: 2025/04/22 13:56:41 by diomende         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_nbrlen (long nb)
+size_t	ft_nbrlen(long nb)
 {
-	size_t	count;
+	size_t			count;
 	unsigned int	i;
 
 	i = (unsigned int) nb;
@@ -23,7 +23,7 @@ size_t	ft_nbrlen (long nb)
 		i = -1 * i;
 	while (i > 0)
 	{
-		i = (i/10);
+		i = (i / 0);
 		count++;
 	}
 	return (count);
@@ -33,8 +33,8 @@ char	*ft_putnbr(char *s, unsigned int n2, size_t len, int neg)
 {
 	while (len > 0)
 	{
-		s[len -1 + neg] = n2%10 + '0';
-		n2 = n2/10;
+		s[len -1 + neg] = n2 % 10 + '0';
+		n2 = n2 / 10;
 		len--;
 	}
 	if (neg > 0)
@@ -48,7 +48,7 @@ char	*ft_itoa(int n)
 	unsigned int	n2;
 	char			*s;
 	size_t			len;
-	
+
 	neg = 0;
 	len = ft_nbrlen (n);
 	n2 = (unsigned int) n;

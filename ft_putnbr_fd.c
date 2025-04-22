@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: diomende <diomende@student.42.fr>          +#+  +:+       +#+        */
+/*   By: diomende <diomende@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 21:04:15 by diomende          #+#    #+#             */
-/*   Updated: 2025/04/21 21:04:22 by diomende         ###   ########.fr       */
+/*   Updated: 2025/04/22 14:08:15 by diomende         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar (char a, int fd)
+void	ft_putchar(char a, int fd)
 {
 	write (fd, &a, 1);
 }
@@ -33,11 +33,11 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	else if (n > 9)
 	{
-		ft_putnbr_fd (n/10, fd);
-		ft_putnbr_fd (n%10, fd);
+		ft_putnbr_fd (n / 10, fd);
+		ft_putnbr_fd (n % 10, fd);
 	}
 	else
-		ft_putchar (n+48, fd);
+		ft_putchar (n + 48, fd);
 }
 
 // int main()

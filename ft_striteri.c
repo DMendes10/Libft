@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: diomende <diomende@student.42.fr>          +#+  +:+       +#+        */
+/*   By: diomende <diomende@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 21:03:36 by diomende          #+#    #+#             */
-/*   Updated: 2025/04/21 21:03:40 by diomende         ###   ########.fr       */
+/*   Updated: 2025/04/22 14:09:18 by diomende         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_striteri(char *s, void (*f) (unsigned int, char*))
 
 	i = 0;
 	if (!s || !f)
-		return;
+		return ;
 	while (s[i])
 	{
 		f (i, &s[i]);
