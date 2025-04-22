@@ -6,7 +6,7 @@
 /*   By: diomende <diomende@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 20:36:26 by diomende          #+#    #+#             */
-/*   Updated: 2025/04/22 14:16:46 by diomende         ###   ########.fr       */
+/*   Updated: 2025/04/22 15:51:59 by diomende         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,5 +54,15 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+t_list	*ft_lstnew(void *content);
+
+
+typedef struct s_list
+{
+	void	*content;
+	struct s_list	*next;
+} t_list;
+
+
 
 #endif

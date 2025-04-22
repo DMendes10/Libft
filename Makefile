@@ -8,15 +8,21 @@ SRCS= ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c\
 		ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c\
 		ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
+BSRCS= ft_lstnew.c 
+
 COMP_LIB = ar rcs
 RM= rm -f
 CC= cc
 CC_FLAGS= -c -Wall -Wextra -Werror
 
 OBJS = $(SRCS:.c=.o)
+BOBJS= $(BSRCS:.c=.o)
 ADD = $(SRCS)
 
 all:$(NAME)
+
+bonus: $(BOBJS) $(BSRCS)
+	$(COMP_LIB) $(NAME) $(BOBJS)
 
 clean:
 	$(RM) $(OBJS)
