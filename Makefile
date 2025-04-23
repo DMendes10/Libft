@@ -24,12 +24,14 @@ all:$(NAME)
 
 bonus: $(BOBJS) $(BSRCS)
 	$(COMP_LIB) $(NAME) $(BOBJS)
+	touch bonus
 
 clean:
 	$(RM) $(OBJS)
 
 fclean: clean
-	$(RM) $(NAME)
+	$(RM) $(NAME) $(BOBJS)
+	$(RM) bonus
 
 re: fclean all
 
