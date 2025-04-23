@@ -6,7 +6,7 @@
 /*   By: diomende <diomende@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 19:36:52 by diomende          #+#    #+#             */
-/*   Updated: 2025/04/22 20:49:59 by diomende         ###   ########.fr       */
+/*   Updated: 2025/04/23 12:42:00 by diomende         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,4 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	return (new);
 }
 
-// ???????????????????
+//

@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: diomende <diomende@student.42.fr>          +#+  +:+       +#+        */
+/*   By: diomende <diomende@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 19:28:14 by diomende          #+#    #+#             */
-/*   Updated: 2025/04/18 19:32:17 by diomende         ###   ########.fr       */
+/*   Updated: 2025/04/23 12:05:57 by diomende         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_count_words(const char *a, char c)
+static size_t	ft_count_words(const char *a, char c)
 {
 	size_t	i;
 	size_t	count;
@@ -31,7 +31,7 @@ size_t	ft_count_words(const char *a, char c)
 	return (count);
 }
 
-char	*ft_makestring(const char *s, char c)
+static char	*ft_makestring(const char *s, char c)
 {
 	size_t	i;
 	size_t	size;
@@ -48,7 +48,7 @@ char	*ft_makestring(const char *s, char c)
 	return (s2);
 }
 
-void	ft_free(char **s)
+static void	ft_free(char **s)
 {
 	size_t	i;
 
@@ -63,7 +63,7 @@ void	ft_free(char **s)
 	free (s);
 }
 
-char	**ft_minisplit(char **a, char const *s, char c)
+static char	**ft_minisplit(char **a, char const *s, char c)
 {
 	size_t	i;
 	size_t	j;

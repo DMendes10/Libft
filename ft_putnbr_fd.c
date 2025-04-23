@@ -6,28 +6,23 @@
 /*   By: diomende <diomende@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 21:04:15 by diomende          #+#    #+#             */
-/*   Updated: 2025/04/22 14:08:15 by diomende         ###   ########.fr       */
+/*   Updated: 2025/04/23 12:09:04 by diomende         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar(char a, int fd)
-{
-	write (fd, &a, 1);
-}
-
 void	ft_putnbr_fd(int n, int fd)
 {
 	if (n == -2147483648)
 	{
-		ft_putchar('-', fd);
-		ft_putchar('2', fd);
+		ft_putchar_fd('-', fd);
+		ft_putchar_fd('2', fd);
 		ft_putnbr_fd (147483648, fd);
 	}
 	else if (n < 0)
 	{
-		ft_putchar('-', fd);
+		ft_putchar_fd('-', fd);
 		n = n * -1;
 		ft_putnbr_fd (n, fd);
 	}
@@ -37,7 +32,7 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd (n % 10, fd);
 	}
 	else
-		ft_putchar (n + 48, fd);
+		ft_putchar_fd (n + 48, fd);
 }
 
 // int main()

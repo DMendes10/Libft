@@ -6,13 +6,13 @@
 /*   By: diomende <diomende@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 19:41:35 by diomende          #+#    #+#             */
-/*   Updated: 2025/04/22 14:24:24 by diomende         ###   ########.fr       */
+/*   Updated: 2025/04/23 12:06:47 by diomende         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_nbrlen(long nb)
+static size_t	ft_nbrlen(long nb)
 {
 	size_t			count;
 	unsigned int	i;
@@ -29,7 +29,7 @@ size_t	ft_nbrlen(long nb)
 	return (count);
 }
 
-char	*ft_putnbr(char *s, unsigned int n2, size_t len, int neg)
+static char	*ft_putnbr(char *s, unsigned int n2, size_t len, int neg)
 {
 	while (len > 0)
 	{
