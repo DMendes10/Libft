@@ -6,7 +6,7 @@
 /*   By: diomende <diomende@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 18:06:45 by diomende          #+#    #+#             */
-/*   Updated: 2025/04/23 12:36:27 by diomende         ###   ########.fr       */
+/*   Updated: 2025/04/23 17:02:19 by diomende         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*last;
 
-	last = *lst;
-	if (!new)
+	if (!new || !lst)
 		return ;
+	last = *lst;
 	if (!*lst)
 	{
 		*lst = new;

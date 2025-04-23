@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: diomende <diomende@student.42.fr>          +#+  +:+       +#+        */
+/*   By: diomende <diomende@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 21:02:54 by diomende          #+#    #+#             */
-/*   Updated: 2025/04/21 21:03:01 by diomende         ###   ########.fr       */
+/*   Updated: 2025/04/23 16:58:32 by diomende         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	i = 0;
 	if (!s || !f)
 	{
-		s2 = ft_calloc (sizeof (char), 1);
-		return (s2);
+		return (NULL);
 	}
 	s2 = ft_calloc (sizeof(char), ft_strlen(s) + 1);
 	if (!s2)

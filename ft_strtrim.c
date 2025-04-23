@@ -6,7 +6,7 @@
 /*   By: diomende <diomende@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 21:02:27 by diomende          #+#    #+#             */
-/*   Updated: 2025/04/22 14:15:53 by diomende         ###   ########.fr       */
+/*   Updated: 2025/04/23 16:57:15 by diomende         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*s2;
 
 	start = 0;
-	end = ft_strlen(s1);
 	if (!s1 || !set)
 		return (NULL);
+	end = ft_strlen(s1);
 	while (ft_strchr(set, s1[start]))
 		start++;
 	while (ft_strrchr(set, s1[end]))

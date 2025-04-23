@@ -6,7 +6,7 @@
 /*   By: diomende <diomende@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 14:11:20 by diomende          #+#    #+#             */
-/*   Updated: 2025/04/22 14:14:11 by diomende         ###   ########.fr       */
+/*   Updated: 2025/04/23 16:54:36 by diomende         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	i;
 
 	i = 0;
+	if (size == 0)
+		return (ft_strlen(src));
 	dstsize = ft_strlen(dst);
 	if (dstsize > size)
 		return (ft_strlen(src) + size);

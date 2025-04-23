@@ -6,7 +6,7 @@
 /*   By: diomende <diomende@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 14:11:11 by diomende          #+#    #+#             */
-/*   Updated: 2025/04/22 14:11:12 by diomende         ###   ########.fr       */
+/*   Updated: 2025/04/23 16:22:49 by diomende         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*s3;
 
+	if (!s1 || !s2)
+		return (NULL);
 	s3 = malloc(sizeof (char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (s3 == NULL)
 		return (NULL);
