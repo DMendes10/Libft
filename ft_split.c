@@ -6,7 +6,7 @@
 /*   By: diomende <diomende@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 19:28:14 by diomende          #+#    #+#             */
-/*   Updated: 2025/04/23 12:05:57 by diomende         ###   ########.fr       */
+/*   Updated: 2025/04/24 19:10:27 by diomende         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,9 @@ static size_t	ft_count_words(const char *a, char c)
 
 static char	*ft_makestring(const char *s, char c)
 {
-	size_t	i;
 	size_t	size;
 	char	*s2;
 
-	i = 0;
 	size = 0;
 	while (s[size] != c && s[size] != '\0')
 		size++;
@@ -107,7 +105,7 @@ char	**ft_split(char const *s, char c)
 // {
 // 	char **	a;
 
-// 	a = ft_split("tripouille", ' ');
+// 	a = ft_split("", 'a');
 // 	printf("%s\n", a[0]);
 
 // 	for (int i = 0; a[i] != NULL; ++i)
