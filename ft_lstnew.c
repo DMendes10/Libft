@@ -6,7 +6,7 @@
 /*   By: diomende <diomende@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 15:38:38 by diomende          #+#    #+#             */
-/*   Updated: 2025/04/22 20:45:02 by diomende         ###   ########.fr       */
+/*   Updated: 2025/04/24 16:07:09 by diomende         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*root;
 
-	root = ft_calloc(sizeof(t_list), 1);
+	root = malloc(sizeof(t_list));
 	if (!root)
 		return (NULL);
 	root->content = content;
