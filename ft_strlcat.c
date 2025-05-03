@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: diomende <diomende@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: diogo <diogo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 14:11:20 by diomende          #+#    #+#             */
-/*   Updated: 2025/04/23 16:54:36 by diomende         ###   ########.fr       */
+/*   Updated: 2025/05/03 05:30:53 by diogo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,7 @@
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	dstsize;
-	size_t	i;
 
-	i = 0;
 	if (size == 0)
 		return (ft_strlen(src));
 	dstsize = ft_strlen(dst);
